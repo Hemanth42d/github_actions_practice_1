@@ -23,6 +23,21 @@ app.post("/addNumbers", (req, res) => {
   res.render("index.ejs", { result: sum });
 });
 
+app.post("/subtractNumbers", (req, res) => {
+  const { firstNumber, secondNumber } = req.body;
+  let diff = null;
+  try {
+    diff = Number(firstNumber) - Number(secondNumber);
+  } catch (error) {
+    diff = "Error: " + error.message;
+  }
+  res.render("index.ejs", { result: diff });
+});
+
+app.get("/subtraction", (req, res) => {
+  res.render("subtraction.ejs");
+});
+
 app.listen(3000, () => {
   console.log("Running on port 3000");
 });

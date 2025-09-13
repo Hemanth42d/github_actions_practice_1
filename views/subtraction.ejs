@@ -58,7 +58,7 @@
         <a href="/">Addition</a>
         <a href="/subtraction">Subtraction</a>
       </p>
-      <form action="/addNumbers" method="post">
+      <form action="/subtractNumbers" method="post">
         <input
           type="number"
           name="firstNumber"
@@ -75,7 +75,7 @@
           required
         />
         <br />
-        <button type="submit">Add Number</button>
+        <button type="submit">Subtract Number</button>
       </form>
       <% if (typeof result !== 'undefined' && result !== null) { %>
       <p>Result: <%= result %></p>
