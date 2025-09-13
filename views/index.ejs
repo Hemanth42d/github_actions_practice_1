@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Actions Demo</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(20, 20, 20);
+      }
+      p {
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+      }
+      form {
+        text-align: center;
+        min-height: 30vh;
+        min-width: 45vw;
+        padding: 2rem;
+        background-color: rgb(61, 61, 61);
+        border-radius: 1rem;
+        border: none;
+      }
+      input {
+        padding: 0.5rem;
+        width: 40%;
+        margin: 1rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        outline: none;
+        border: 1px solid black;
+      }
+      button {
+        background-color: blue;
+        color: white;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        padding: 0.6rem;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Add Two Numbers</p>
+    </div>
+    <div class="form-div">
+      <form action="/addNumbers" method="post">
+        <input
+          type="number"
+          name="firstNumber"
+          id="operand_one"
+          placeholder="Enter first number"
+        />
+        <br />
+        <input
+          type="number"
+          name="secondNumber"
+          id="operand_two"
+          placeholder="Enter second number"
+        />
+        <br />
+        <button type="submit">Add Number</button>
+      </form>
+      <% if (typeof result !== 'undefined' && result !== null) { %>
+      <p>Result: <%= result %></p>
+      <% } %>
+    </div>
+  </body>
+</html>
